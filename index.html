@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in-Zipp Semillas</title>
+    <link rel="stylesheet" href="CSS/StyleSesion.css">
+  <script src="JS/Script.js"></script>
+</head>
+<body id="body-image">
+    <header>
+    <div id="header-image" class="container">
+        <a href="#" class="logo">
+            <img src="Images/img.png" alt="Logo Zipp Semillas">
+        </a>
+        <h1>Fundación Mil Semillas</h1>
+        <p>Brindando esperanza, educación y felicidad a niños de todo el mundo.</p>
+    </div>
+</header>
+  
+    <main> 
+        <section id="login-form"> 
+            <h2>Iniciar Sesión</h2> 
+            <form action="#" method="post" id="login-form">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <div class="btn-container">
+        <div class="login-btn">
+            <button type="submit" class="btn btn-login">Iniciar Sesión</button>
+        </div>
+        <div class="forgot-password">
+            <a href="#">Recuperar Contraseña</a>            
+        </div>        
+    </div>
+    <button type="button" class="btn btn-cancel" onclick="showRegisterForm()">Registrarse</button>
+</form>
+</section>
+
+        <section id="register-form" style="display: none;">
+            <h2>Registrarse</h2>
+            <form action="#" method="post" id="registration-form">              
+                <form action="#" method="post" id="registration-form">
+                <label for="first_name">Nombre:</label>
+                <input type="text" id="first_name" name="first_name" required>
+
+                <label for="last_name">Apellidos:</label>
+                <input type="text" id="last_name" name="last_name" required>
+
+                <label for="document_type">Tipo de Documento:</label>
+                <select id="document_type" name="document_type" required>
+                    <option value="">Seleccione</option>
+                    <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                    <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                    <option value="Cedula extranjera">Cedula extranjera</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+
+                <label for="document_number">Número de Documento:</label>
+                <input type="text" id="document_number" name="document_number" oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                required> 
+
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" min="1" required> 
+
+
+                <label for="phone">Teléfono:</label>
+                <input type="text" id="phone" name="phone" oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                required> 
+
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required>
+            
+                <label for="gender">Género:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Seleccione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido" />
+
+
+                <label for="city">Ciudad de residencia:</label>
+                <select id="city" name="city" required>
+                    <option value="">Seleccione</option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Buenaventura">Buenaventura</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Cartagena</option>
+                    <option value="Cúcuta">Cúcuta</option>
+                    <option value="Florencia">Florencia</option>
+                    <option value="Ibagué">Ibagué</option>
+                    <option value="Inírida">Inírida</option>
+                    <option value="Leticia">Leticia</option>
+                    <option value="Manizales">Manizales</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Mitú">Mitú</option>
+                    <option value="Mocoa">Mocoa</option>
+                    <option value="Montería">Montería</option>
+                    <option value="Neiva">Neiva</option>
+                    <option value="Pasto">Pasto</option>
+                    <option value="Pereira">Pereira</option>
+                    <option value="Popayán">Popayán</option>
+                    <option value="Puerto Carreño">Puerto Carreño</option>
+                    <option value="Quibdó">Quibdó</option>
+                    <option value="Riohacha">Riohacha</option>
+                    <option value="San Andrés">San Andrés</option>
+                    <option value="San José del Guaviare">San José del Guaviare</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="Sincelejo">Sincelejo</option>
+                    <option value="Tunja">Tunja</option>
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Yopal">Yopal</option>   
+                </select>
+
+<label for="country">País de origen:</label>
+<select id="country" name="country" required>
+    
+    <option value="">Seleccione</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Chile">Chile</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Costa Rica">Costa Rica</option>
+    <option value="Cuba">Cuba</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="El Salvador">El Salvador</option>
+    <option value="España">España</option>
+    <option value="Guatemala">Guatemala</option>
+    <option value="Honduras">Honduras</option>
+    <option value="México">México</option>
+    <option value="Nicaragua">Nicaragua</option>
+    <option value="Panamá">Panamá</option>
+    <option value="Paraguay">Paraguay</option>
+    <option value="Perú">Perú</option>
+    <option value="República Dominicana">República Dominicana</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Venezuela">Venezuela</option>
+</select>
+
+                <label for="eps">EPS:</label>
+                <select id="eps" name="eps" required>
+                    <option value="">Seleccione</option>
+                    <option value="Aliansalud EPS">Aliansalud EPS</option>
+                    <option value="Cajacopi EPS">Cajacopi EPS</option>
+                    <option value="Capital Salud EPS">Capital Salud EPS</option>
+                    <option value="Coomeva EPS">Coomeva EPS</option>
+                    <option value="Compensar EPS">Compensar EPS</option>
+                    <option value="Comparta EPS">Comparta EPS</option>
+                    <option value="Comfenalco Antioquia EPS">Comfenalco Antioquia EPS</option>
+                    <option value="Comfenalco Valle EPS">Comfenalco Valle EPS</option>
+                    <option value="Coosalud">Coosalud</option>
+                    <option value="Cruz Blanca EPS">Cruz Blanca EPS</option>
+                    <option value="Ecoopsos EPS">Ecoopsos EPS</option>
+                    <option value="EPS Sura">EPS Sura</option>
+                    <option value="Famisanar EPS">Famisanar EPS</option>
+                    <option value="Mutual Ser">Mutual Ser</option>
+                    <option value="Nueva EPS">Nueva EPS</option>
+                    <option value="Saludcoop EPS">Saludcoop EPS</option>
+                    <option value="Saludcoop ISS">Saludcoop ISS</option>
+                    <option value="Salud Total EPS">Salud Total EPS</option>
+                    <option value="Saludvida EPS">Saludvida EPS</option>
+                    <option value="Sanitas EPS">Sanitas EPS</option>
+                    <option value="Savia Salud EPS">Savia Salud EPS</option>
+                    <option value="SOS EPS">SOS EPS</option>
+                </select>
+
+                <label for="file">Subir Certificado:</label>
+                <input type="file" id="file" name="file">
+
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-login">Registrarse</button>
+                    <button type="button" class="btn btn-cancel" onclick="showLoginForm()">Cancelar Registro</button>
+                </div>
+            </form> </div>
+            </form>
+            </form>            
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Zipp Semillas. <a href="/politica-de-privacidad">Política de Privacidad</a> y <a href="/terminos-de-uso">Términos de Uso</a>.</p>
+      <a href="Zipp.html">Ir a la página de inicio</a>
+    </footer>
+  
+</body>
+</html>

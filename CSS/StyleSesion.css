@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;    
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1.6;
+    background-attachment: fixed;
+    color: #3b2b52;
+}
+
+.d-mode {
+    background-image: url('../Images/art.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.n-mode {
+    background-image: url('../Images/luna.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+  h1 {
+  font-size: 36px;
+}
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+  p {
+  font-size: 26px;
+}
+
+    .container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0;
+    background-position: center top;
+    background-size: contain;
+}
+
+    .logo img {
+    width: 200px;
+    height: 130px;
+}
+
+  header {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000, -2px -2px 5px #000, 2px -2px 5px #000, -2px 2px 5px #000;
+    padding: 0;
+}
+
+.day-mode {
+    background-image: url('../Images/day.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.night-mode {
+    background-image: url('../Images/night.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  main {
+    max-width: 700px;
+    background-color: rgba(166, 106, 205, 0.7);
+    margin: 0 auto;
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+
+  main, footer {
+    background-color: rgba(166, 106, 205, 0.5);
+}
+
+form .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+form .login-btn {
+    display: flex;
+    align-items: center;
+}
+
+form .forgot-password {
+    display: flex;
+    align-items: center;
+}
+
+.btn-cancel {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #ece6c5;
+}
+
+select {
+    height: 40px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #e3a1c4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #6A5ACD;
+    transform: scale(1.05);
+}
+
+a {
+    font-size: 20px;
+    color: #2933bc;
+    text-decoration: underline;    
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #e3a1c4;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px #333, -2px -2px 5px #333, 2px -2px 5px #333, -2px 2px 5px #333;
+}
+
+.btn-login {
+    background-color: #333;
+}
+
+.btn-login:hover {
+    background-color: #6A5ACD;
+}
+
+.btn-cancel {
+    background-color: #333;
+    margin-left: auto;
+}
+
+.btn-cancel:hover {
+    background-color: #6A5ACD;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+#register-form {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0px 0;
+    }
+    
+    .logo img {
+        width: 150px auto;
+    }
+
+    main {
+        padding: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 160px;
+        margin-bottom: 120px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+    }
+    
+    form label,
+    input,
+    select,
+    textarea {
+        font-size: 20px;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+        padding: 8px;
+    }
+
+    .btn {
+      font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    
+    footer {
+        padding: 10px;
+        padding-top: 10px;
+    }
+}
