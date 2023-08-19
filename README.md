@@ -1,5 +1,5 @@
-# project-g2-zipp-semillas
-project-g2-zipp-semillas created by GitHub Classroom
+Zipp Semillas
+Gaes 2
 
 Introducción 
 El propósito de este documento es recopilar, analizar y definir las necesidades y características de alto nivel de un
