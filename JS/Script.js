@@ -1,13 +1,15 @@
+// Funcion de Registro
 function showRegisterForm() {
     document.getElementById("login-form").style.display = "none";
     document.getElementById("register-form").style.display = "block";
 }
-
+// Funcion Inicio Sesion
 function showLoginForm() {
     document.getElementById("login-form").style.display = "block";
     document.getElementById("register-form").style.display = "none";
 }
 
+// Funcion cambia imagen dia y noche
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.getElementById("body-image");
     const now = new Date();
