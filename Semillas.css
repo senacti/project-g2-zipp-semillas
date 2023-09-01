@@ -21,7 +21,7 @@ img{
     margin: 0 auto;
 }
 .header{
-    background-image: url(zipp/bg-01.png);
+    background-image: url(zipp/bg-01.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -77,6 +77,19 @@ img{
 
 .header-content{
     display: flex;
+}
+
+.footer-txt a {
+  font-size: 26px;
+  color:#6f6dd9;
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #e3a1c4;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px #333, -2px -2px 5px #333, 2px -2px 5px #333, -2px 2px 5px #333;
 }
 
 .header-txt{
@@ -230,4 +243,64 @@ footer {
   color: #fff;
   margin-top: 0px;
   margin-bottom: 0%;
+}
+.map{
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    
+}
+@media(max-width:991px){
+
+  .footer-txt p, a {
+    font-size: 16px;
+  }
+    .menu{
+        padding: 20px;
+    }
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 150%;
+        left: 0;
+        right: 0;
+        background-color: #2c0044;
+        display: none;
+    }
+    .menu .navbar ul li a:hover{
+        color: #de97ff;
+    }
+
+    .menu .navbar ul li{
+        width: 100%
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    .header{
+        min-height: 0vh;
+        padding: 160px 30px 50px 30px;
+    }
+    .header-txt{
+        text-align: center;
+        flex-basis: 100%;
+    }
+    .header-txt h1 {
+        font-size:50px ;
+        margin-bottom: 15px;
+    }
+    .butons{
+        justify-content: center;
+
+    }
+
+    .btn-1:last-of-type{
+        margin-right: 0;
+    }
 }

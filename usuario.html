@@ -79,199 +79,194 @@
       <div class="col-md-10 p-5 pt-2">
         <h3><i class="fa fa-child"></i> Lista acudientes y alumnos</h3>
         <hr>
-        <style>
-       .table{
-            background-color: rgba(76, 15, 141, 253);
-            color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-          }
- .table th,
-          .table td {
-            border-color: rgba(76, 15, 141, 253);
-          }
-          
-          
-          .table-purple {
-            background-color: rgba(76, 15, 141, 253);
-            color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-          }
 
-          .table-purple th,
-          .table-purple td {
-            border-color: rgba(76, 15, 141, 253);
-          }
+        <body>
+          <!-- Botones para agregar, editar y eliminar -->
+          <div class="mb-3">
+            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal"><i
+                class="fa fa-plus"></i></a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                class="fa fa-pencil"></i></a>
+            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                class="fa fa-trash-o"></i></a>
+          </div>
+          <div class="container mt-5">
+            <div class="btn-group mb-3">
+              <button class="btn btn-outline-primary" onclick="showTable('fruits')">Estudiantes</button>
+              <button class="btn btn-outline-primary" onclick="showTable('vegetables')">Docentes</button>
+              <!-- Agrega más botones para otras categorías -->
+            </div>
 
-          .table-purple th {
-            color: white;
-            background-color: rgba(76, 15, 141, 253);
-          }
-        </style>
-          <table class="table ">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre acudientes</th>
-              <th scope="col">documento</th>
-            </tr>
- </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>hains duffern</td>
-              <td>CC</td>
-            </tr>
-               <tr>
-              <th scope="row">2</th>
-              <td>rosita fresita</td>
-              <td>CC</td>
-            </tr>
-               <tr>
-              <th scope="row">3</th>
-              <td>jose jose </td>
-              <td>CC</td>
-            </tr>
-               <tr>
-              <th scope="row">4</th>
-              <td>alisson maria</td>
-              <td>CC</td>
-            </tr>
-            
-  
-        <table class="table table-purple">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre alumnos</th>
-              <th scope="col">Edad</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>John Doe</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jane Smith</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Michael Johnson</td>
-              <td>7</td>
-            </tr>
-             <tr>
-              <th scope="row">4</th>
-              <td>pato ramieres juan</td>
-              <td>7</td>
-            </tr>
-             <tr>
-              <th scope="row">5</th>
-              <td>risaralda costeña</td>
-              <td>3</td>
-                <tr>
-              <th scope="row">6</th>
-              <td>jhon ramirez</td>
-              <td>1</td>
-                   <tr>
-              <th scope="row">7</th>
-              <td>Michael Jackson</td>
-              <td>2</td>
-                      <tr>
-              <th scope="row">8</th>
-              <td>vanegitas</td>
-              <td>7</td>
-                                    <tr>
-              <th scope="row">9</th>
-              <td>Michael Jordan</td>
-              <td>7</td>
-                        
-            </tr>
-            </tr>
-            </tr>
-            </tr>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+            <div id="fruitsTable" class="table-responsive" style="display: none;">
+              <!-- Tabla de Cocineros -->
+              <table class="table table-striped">
+                <thead class="table-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Documento</th>
+                    <th>Edad</th>
+                    <th>Email</th>
+                    <th>Ciudad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Filas de Cocineros -->
+                  <tr>
+                    <td>1</td>
+                    <td>Maria</td>
+                    <td>Hernandez</td>
+                    <td>1032566723</td>
+                    <td>4</td>
+                    <td>@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>pedro </td>
+                    <td>pascal</td>
+                    <td>103056971</td>
+                    <td>2</td>
+                    <td>@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>smael </td>
+                    <td>ewines</td>
+                    <td>103084610</td>
+                    <td>1</td>
+                    <td>@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>chinoko </td>
+                    <td>canoco</td>
+                    <td>103086941</td>
+                    <td>3</td>
+                    <td>@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Previous</a></li>
+                  <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                  <li class="page-item"><a href="#" class="page-link">2</a></li>
+                  <li class="page-item"><a href="#" class="page-link">3</a></li>
+                  <li class="page-item"><a href="#" class="page-link">4</a></li>
+                  <li class="page-item"><a href="#" class="page-link">5</a></li>
+                  <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div id="vegetablesTable" class="table-responsive" style="display: none;">
+              <!-- Tabla de Docentes -->
+              <table class="table table-striped">
+                <thead class="table-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <td>Apellido</td>
+                    <th>Documento</th>
+                    <th>Edad</th>
+                    <th>Gmail</th>
+                    <th>Ciudad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Filas de Docentes -->
+                  <tr>
+                    <td>1</td>
+                    <td>Andres</td>
+                    <td>gomez</td>
+                    <td>1043054889</td>
+                    <td>34</td>
+                    <td>Andresmarin@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ana</td>
+                    <td>Maria </td>
+                    <td>1057742046</td>
+                    <td>25</td>
+                    <td>diazana@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Jose </td>
+                    <td>perez</td>
+                    <td>156184351</td>
+                    <td>28</td>
+                    <td>josesito@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>ramón Carlos </td>
+                    <td>Sanchez Santa 
+                    <td>103056971</td>
+                    <td>22</td>
+                    <td>mariateamomucho@gmail.com</td>
+                    <td>Bogota</td>
+                  </tr>
+                  <!-- Agrega más filas según tus datos -->
+                </tbody>
+
+              </table>
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Previous</a></li>
+                  <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                  <li class="page-item"><a href="#" class="page-link">2</a></li>
+                  <li class="page-item"><a href="#" class="page-link">3</a></li>
+                  <li class="page-item"><a href="#" class="page-link">4</a></li>
+                  <li class="page-item"><a href="#" class="page-link">5</a></li>
+                  <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+
+
+
+            <!-- Agrega más divs y tablas para otras categorías -->
+
+          </div>
+
+
+
   </main>
 
-<body>
-  <!-- Botones para agregar, editar y eliminar -->
-    <div class="mb-3">
-        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa fa-plus"></i></a>
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa fa-pencil"></i></a>
-        <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash-o"></i></a>
-    </div>
-  
-    <div class="container mt-5">
-        <div class="btn-group mb-3">
-            <button class="btn btn-outline-primary" onclick="showTable('fruits')">jardin </button>
-            <button class="btn btn-outline-primary" onclick="showTable('vegetables')">parvulos</button>
-             <button class="btn btn-outline-primary" onclick="showTable('fruits')">nombre de acudiente  </button>
-            <!-- Agrega más botones para otras categorías -->
-        </div>
-
-        <div id="fruitsTable" class="table-responsive" style="display: none;">
- 
-          <nav>
-    <ul class="pagination">
-        <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Previous</a></li>
-        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-        <li class="page-item"><a href="#" class="page-link">2</a></li>
-        <li class="page-item"><a href="#" class="page-link">3</a></li>
-        <li class="page-item"><a href="#" class="page-link">4</a></li>
-        <li class="page-item"><a href="#" class="page-link">5</a></li>
-        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-    </ul>
-</nav>
-        </div>
-
-        <div id="vegetablesTable" class="table-responsive" style="display: none;">
-          <nav>
-    <ul class="pagination">
-        <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Previous</a></li>
-        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-        <li class="page-item"><a href="#" class="page-link">2</a></li>
-        <li class="page-item"><a href="#" class="page-link">3</a></li>
-        <li class="page-item"><a href="#" class="page-link">4</a></li>
-        <li class="page-item"><a href="#" class="page-link">5</a></li>
-        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-    </ul>
-</nav>
-        </div>
-
-      
 
 
-    </div>
-          </main>
- 
-      <footer>
-        <p>© 2023 Zipp Semillas. <a href="/politica-de-privacidad">Política de Privacidad</a> y <a href="/terminos-de-uso">Términos de Uso</a>.</p>
-        
-    </footer>
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="JS/admin.js"></script>
-    
+  <footer>
+    <p>© 2023 Zipp Semillas. <a href="/politica-de-privacidad">Política de Privacidad</a> y <a
+        href="/terminos-de-uso">Términos de Uso</a>.</p>
+
+    <p><i class="fa fa-facebook-square"></i> Facebook</p>
+    <p><i class="fa fa-instagram"></i> Instagram</p>
+
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="JS/admin.js"></script>
 
 
 
- 
+
+
 </html>

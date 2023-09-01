@@ -81,13 +81,28 @@
  <!-- Aqui agregen cositas -->
 
 <body>
+
+  <!-- Buscador -->
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form id="search-form" class="mt-4">
+        <div class="input-group">
+          <input type="text" id="search-input" class="form-control" placeholder="Escribe tu búsqueda">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  
   <!-- Botones para agregar, editar y eliminar -->
     <div class="mb-3">
         <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa fa-plus"></i></a>
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa fa-pencil"></i></a>
-        <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash-o"></i></a>
-    </div>
-  
+        
     <div class="container mt-5">
         <div class="btn-group mb-3">
             <button class="btn btn-outline-primary" onclick="showTable('fruits')">Frutas</button>
@@ -96,9 +111,11 @@
         </div>
 
         <div id="fruitsTable" class="table-responsive" style="display: none;">
+          
             <!-- Tabla de Frutas -->
             <table class="table table-striped">
                 <thead class="table-dark">
+                  
                     <tr>
                         <th>#</th>
                         <th>Nombre del Alimento</th>
@@ -115,6 +132,12 @@
                         <td>10</td>
                         <td>KG</td>
                         <td>2023-08-31</td>
+                      <td>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="fa fa-pencil"></i></a>
+                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="fa fa-trash-o"></i></a>
+                  </td>
                     </tr>
                   <tr>
                         <td>2</td>
@@ -122,6 +145,12 @@
                         <td>40</td>
                         <td>KG</td>
                         <td>2023-08-31</td>
+                    <td>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="fa fa-pencil"></i></a>
+                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="fa fa-trash-o"></i></a>
+                  </td>
                     </tr>
                     <!-- Agrega más filas según tus datos -->
                 </tbody>
@@ -159,10 +188,17 @@
                         <td>15</td>
                         <td>GR</td>
                         <td>2023-09-15</td>
+                      <td>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                        class="fa fa-pencil"></i></a>
+                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                        class="fa fa-trash-o"></i></a>
+                  </td>
                     </tr>
                     <!-- Agrega más filas según tus datos -->
+                  
                 </tbody>
-              
+               
             </table>
           <nav>
     <ul class="pagination">
@@ -185,9 +221,13 @@
           </main>
  
       <footer>
-        <p>© 2023 Zipp Semillas. <a href="/politica-de-privacidad">Política de Privacidad</a> y <a href="/terminos-de-uso">Términos de Uso</a>.</p>
-        
-    </footer>
+    <p>© 2023 Zipp Semillas. <a href="/politica-de-privacidad">Política de Privacidad</a> y <a
+        href="/terminos-de-uso">Términos de Uso</a>.</p>
+
+    <p><i class="fa fa-facebook-square"></i> Facebook</p>
+    <p><i class="fa fa-instagram"></i> Instagram</p>
+
+  </footer>
           <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
