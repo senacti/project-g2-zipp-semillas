@@ -123,6 +123,19 @@ nav {
   margin: 20px;
 }
 
+a {
+  font-size: 26px;
+  color: #6f6dd9;
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #e3a1c4;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px #333, -2px -2px 5px #333, 2px -2px 5px #333, -2px 2px 5px #333;
+}
+
 .baner {
   padding: 15px 0;
   text-align: center;
@@ -302,6 +315,10 @@ footer {
   align-items: center;
   margin-top: -70px;
 }
+
+p, a {
+    font-size: 16px;
+  }
 
 footer {
     padding: 10px;

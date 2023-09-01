@@ -205,10 +205,14 @@ button:hover {
   background-color: #6A5ACD;
   transform: scale(1.05);
 }
+p {
+  font-size: 16px;
+  color: #fff;
+}
 
-a {
-  font-size: 26px;
-  color: #2933bc;
+.footer-txt a {
+  font-size: 16px;
+  color:#6f6dd9;
   text-decoration: underline;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -243,8 +247,8 @@ footer {
   padding: 10px;
   background-color: #333;
   color: #fff;
-  margin-top: 20px;
-  margin-bottom: 0%;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 #register-form {
@@ -305,7 +309,8 @@ footer {
 
   footer {
     padding: 10px;
-    padding-top: 10px;
+    padding-top: 0px;
     margin-bottom: 0%;
+    
   }
 }
