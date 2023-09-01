@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/dash.css">
+    <script src="JS/Script.js"></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+
+      <div>
+        <img src="zipp/Logo.png" alt="logo" class="logo">
+      </div>
+
+      <input type="checkbox" id="check">
+      <label for="check" class="bar-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a class="active" href="#"></a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Quienes somos</a></li>
+      </ul>
+    </nav>
+
+    <div class="banner-tex container">
+      
+      <div class="img-header">
+        <img src="zipp/h3.png" alt="">
+      </div>
+
+    </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main>
+        <div class="row no-gutters mt-5">
+        <div class="col-md-2" style="background-color: rgba(76,15,141,253); padding-right: 15px; padding-top: 15px;">
+    <ul class="nav flex-column ml-3 mb-5">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="Dashboard.html"><i class="fa fa-tachometer mr-2"
+                            aria-hidden="true"></i>Tablero</a>
+                    <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="actividad.html"><i class="fa fa-calendar"></i> Cronograma actividades</a>
+                    <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="inventario.html"><i class="fa fa-apple"></i> Inventario alimenticio</a>
+                    <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="personal.html"><i class="fa fa-address-card-o"></i> Personal</a>
+                    <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="usuario.html"><i class="fa fa-child"></i> Acudientes y alumnos</a>
+                    <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="Dashboard.html"><i class="fa fa-paper-plane mr-2"
+                            aria-hidden="true"></i> Algo adicional</a>
+                    <hr class="bg-secondary">
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10 p-5 pt-2">
+            <h3><i class="fa fa-apple"></i> Inventario alimenticio</h3>
+            <hr>
+ <!-- Aqui agregen cositas -->
+
+<body>
+  <!-- Botones para agregar, editar y eliminar -->
+    <div class="mb-3">
+        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa fa-plus"></i></a>
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa fa-pencil"></i></a>
+        <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash-o"></i></a>
+    </div>
+  
+    <div class="container mt-5">
+        <div class="btn-group mb-3">
+            <button class="btn btn-outline-primary" onclick="showTable('fruits')">Frutas</button>
+            <button class="btn btn-outline-primary" onclick="showTable('vegetables')">Vegetales</button>
+            <!-- Agrega más botones para otras categorías -->
+        </div>
+
+        <div id="fruitsTable" class="table-responsive" style="display: none;">
+            <!-- Tabla de Frutas -->
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del Alimento</th>
+                        <th>Cantidad</th>
+                        <th>Unidad de medida</th>
+                        <th>Fecha de Vencimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de alimentos de la categoría de Frutas -->
+                    <tr>
+                        <td>1</td>
+                        <td>Manzana</td>
+                        <td>10</td>
+                        <td>KG</td>
+                        <td>2023-08-31</td>
+                    </tr>
+                  <tr>
+                        <td>2</td>
+                        <td>Pera</td>
+                        <td>40</td>
+                        <td>KG</td>
+                        <td>2023-08-31</td>
+                    </tr>
+                    <!-- Agrega más filas según tus datos -->
+                </tbody>
+            </table>
+          <nav>
+    <ul class="pagination">
+        <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Previous</a></li>
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+    </ul>
+</nav>
+        </div>
+
+        <div id="vegetablesTable" class="table-responsive" style="display: none;">
+            <!-- Tabla de Vegetales -->
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del Alimento</th>
+                        <th>Cantidad</th>
+                        <th>Unidad de medida</th>
+                        <th>Fecha de Vencimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de alimentos de la categoría de Vegetales -->
+                    <tr>
+                        <td>1</td>
+                        <td>Zanahoria</td>
+                        <td>15</td>
+                        <td>GR</td>
+                        <td>2023-09-15</td>
+                    </tr>
+                    <!-- Agrega más filas según tus datos -->
+                </tbody>
+              
+            </table>
+          <nav>
+    <ul class="pagination">
+        <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Previous</a></li>
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+    </ul>
+</nav>
+        </div>
+
+      
+
+        <!-- Agrega más divs y tablas para otras categorías -->
+
+    </div>
+          </main>
+ 
+      <footer>
+        <p>© 2023 Zipp Semillas. <a href="/politica-de-privacidad">Política de Privacidad</a> y <a href="/terminos-de-uso">Términos de Uso</a>.</p>
+        
+    </footer>
+          <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="JS/admin.js"></script>
+    
+</body>
+</html>
