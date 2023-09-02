@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+  background-image: url(../Images/bg-01.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-color: blueviolet;
+  /* Cambia el color de fondo según tu preferencia */
+  padding: 100px;; 
+  /* Agrega espacio interno al encabezado */
+  color: #fff;
+  /* Cambia el color del texto a blanco o el que prefieras */
+
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-image: url('../Images/Niños\ jardin.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  padding: 0px;
+  position: relative;
+  background-color: #fbe5df;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: white;
+  padding: 10px;
+  /* Reduce el padding para hacer el fondo más pequeño */
+  margin: 10px auto;
+  /* Agrega margen en la parte superior e inferior y centra horizontalmente */
+
+}
+
+p, h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+h3 {
+  padding: 50px;
+  margin-bottom: 52px;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+
+}
+.back-button {
+  display: inline-block;
+  margin: 35px 0px;
+  padding: 10px 25px;
+  border: 2px solid #e3a1c4;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #6A5ACD;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Estilos para el texto dentro del footer */
+footer p {
+  font-size: 20px; 
+}
+
+/* Estilos para el pie de página */
+footer a {
+  color: turquoise;
+  text-decoration: underline;
+
+}
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 210px;
+  border-radius: 5px;
+}
