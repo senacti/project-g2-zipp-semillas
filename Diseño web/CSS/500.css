@@ -9,7 +9,7 @@
 
 header {
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   background-image: url(../Images/bg-01.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -18,13 +18,11 @@ header {
   align-items: center;
   background-color: blueviolet;
   /* Cambia el color de fondo según tu preferencia */
-  padding: 100px;; 
+  padding: 10px;; 
   /* Agrega espacio interno al encabezado */
   color: #fff;
   /* Cambia el color del texto a blanco o el que prefieras */
-
 }
-
 body {
   font-family: 'Roboto Slab', serif;
   background-image: url('../Images/Niños\ jardin.jpg');
@@ -36,16 +34,119 @@ body {
   position: relative;
   background-color: #fbe5df;
 }
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+     width: 200px;
+     margin-left: 20px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a {
+    font-size:18px ;
+    padding: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    display: block;
+} 
+
+.menu .navbar ul li a:hover{
+    color: #de97ff;
+}
+
+
+#menu {
+    display: none;
+}
+
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor:pointer;
+    display: none;
+}
+
+.header-content{
+    display: flex;
+}
+.header-txt{
+    flex-basis: 50%;
+}
+
+.header-txt h1{
+    font-size: 60px;
+    color: #FFFFFF;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+.header-txt span{
+    color: #de97ff;
+}
+.header-txt p{
+    font-size: 17px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+.butons{
+    display: flex;
+}
+
+.btn-1{
+    display:inline-block;
+    padding: 11px 35px;
+    border: 2px solid #de97ff;
+    border-radius: 25px;
+    margin-right: 25px;
+    font-size: 17px; 
+    color: #FFFFFF;
+
+}
+
+.btn-1:hover,.btn-1 b:hover {
+    background-color: #de97ff;
+    color: #2c0044;
+    
+}
+.general{
+    width: 50%;
+    text-align: center;
+}
+
+.general-img img{
+    width: 150px;
+    padding: 20px;
+}
+
+.general-txt p{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 80px;
+    color: white;
+}
 
 h1 {
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 5px;
   color: white;
   padding: 10px;
-  /* Reduce el padding para hacer el fondo más pequeño */
-  margin: 10px auto;
-  /* Agrega margen en la parte superior e inferior y centra horizontalmente */
-
+  margin: 30px auto;
 }
 
 p, h3 {
@@ -61,8 +162,9 @@ h3 {
 .logo img {
   width: 200px;
   height: auto;
-
+  margin-left: 10px;
 }
+
 .back-button {
   display: inline-block;
   margin: 35px 0px;
@@ -105,6 +207,75 @@ footer a {
 }
 main {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 210px;
+  padding: 90px;
   border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media(max-width:991px){
+
+  h1{
+    font-size: 20px;
+  }
+  p, a {
+    font-size: 16px;
+  }
+    .logo img {
+    width: 150px; 
+    margin-left: 0px; 
+  }
+
+  .footer-txt p, a {
+    font-size: 20px;
+  }
+    .menu{
+        padding: 20px;
+    }
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 150%;
+        left: 0;
+        right: 0;
+        background-color: #2c0044;
+        display: none;
+    }
+    .menu .navbar ul li a:hover{
+        color: #de97ff;
+    }
+
+    .menu .navbar ul li{
+        width: 100%
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    .header{
+        min-height: 0vh;
+        padding: 160px 30px 50px 30px;
+    }
+    .header-txt{
+        text-align: center;
+        flex-basis: 100%;
+    }
+    .header-txt h1{
+        font-size:60px;
+        margin-bottom: 15px;
+    }
+    .butons{
+        justify-content: center;
+
+    }
+
+    .btn-1:last-of-type{
+        margin-right: 0;
+    } 
 }
