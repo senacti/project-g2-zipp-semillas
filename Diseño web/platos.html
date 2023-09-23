@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS file -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="CSS/dash.css">
+  <script src="JS/Script.js"></script>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <nav>
+
+      <div>
+        <a href="index.html" class="logo">
+        <img src="zipp/Logo.png" alt="logo" class="logo">
+        </a>
+      </div>
+
+      <input type="checkbox" id="check">
+      <label for="check" class="bar-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a class="active" href="#"></a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Quienes somos</a></li>
+      </ul>
+    </nav>
+
+    <div class="banner-tex container">
+
+      <div class="img-header">
+        <img src="zipp/h3.png" alt="">
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+    <div class="row no-gutters mt-5">
+      <div class="col-md-2" style="background-color: rgba(76,15,141,253); padding-right: 15px; padding-top: 15px;">
+        <ul class="nav flex-column ml-3 mb-5">
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="Dashboard.html"><i class="fa fa-tachometer mr-2"
+                aria-hidden="true"></i> Tablero</a>
+            <hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="actividad.html"><i class="fa fa-calendar"></i> Cronograma
+              actividades</a>
+            <hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="inventario.html"><i class="fa fa-apple"></i> Inventario alimenticio</a>
+            <hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="personal.html"><i class="fa fa-address-card-o"></i> Personal</a>
+            <hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="usuario.html"><i class="fa fa-child"></i> Acudientes y alumnos</a>
+            <hr class="bg-secondary">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="platos.html"><i class="fa fa-cutlery"></i> Menú alimenticio</a>
+            <hr class="bg-secondary">
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 p-5 pt-2">
+        <h3><i class="fa fa-cutlery"></i> Menú alimenticio</h3>
+        <hr>
+        <!-- Aqui agregen cositas -->
+
+<!-- Buscador -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <form id="search-form" class="mt-4">
+                  <div class="input-group">
+                    <input type="text" id="search-input" class="form-control" placeholder="Escribe tu búsqueda">
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-primary">Buscar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        
+        <div class="mb-3">
+            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal"><i
+                class="fa fa-plus"></i></a>
+<br>
+        
+<div class="container">
+        <div class="row">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Images/panBonito.jpg" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sandwich de mantequilla de maní</h5>
+                        <p class="card-text">Descripción del platillo.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">Instrucciones</button>
+                      <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                            class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                            class="fa fa-trash-o"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Images/guiso-de-arroz-con-carne.jpg" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Guiso Arroz con carne</h5>
+                        <p class="card-text">Descripción del platillo.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">Instrucciones</button>
+                      <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                            class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                            class="fa fa-trash-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">Preparación:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1>Sándwich de Mantequilla de Maní y Banana</h1>
+
+    <h2>Ingredientes:</h2>
+    <ul>
+        <li>2 rebanadas de pan integral (asegúrate de verificar si hay alergias a los ingredientes antes de usar pan de trigo)</li>
+        <li>1-2 cucharadas de mantequilla de maní (asegúrate de que sea adecuada para niños y no contenga alérgenos)</li>
+        <li>1 banana madura, pelada y en rodajas finas (asegúrate de que el niño no tenga alergia a las bananas)</li>
+    </ul>
+
+    <h2>Instrucciones:</h2>
+
+    <h3>Para niños de jardín (3-5 años):</h3>
+    <ol>
+        <li>Coloca una rebanada de pan en una superficie de trabajo limpia.</li>
+        <li>Extiende una capa fina de mantequilla de maní sobre la rebanada de pan.</li>
+        <li>Coloca las rodajas de banana sobre la mantequilla de maní.</li>
+        <li>Cubre con la segunda rebanada de pan y presiona suavemente.</li>
+        <li>Puedes cortar el sándwich en formas divertidas utilizando cortadores de galletas con formas para hacerlo más atractivo para los niños.</li>
+    </ol>
+
+    <h3>Para prejardín (0-3 años):</h3>
+    <ol>
+        <li>Asegúrate de que el pan esté bien cortado en trozos pequeños, evitando piezas grandes que puedan representar un riesgo de asfixia para los niños pequeños.</li>
+        <li>Coloca los trozos de pan en un plato o en una bandeja segura para niños pequeños.</li>
+        <li>Ofrece pequeñas cucharadas de mantequilla de maní y coloca las rodajas de banana en el plato junto al pan.</li>
+        <li>Los niños pequeños pueden sumergir el pan en la mantequilla de maní y luego en las rodajas de banana antes de comerlo.</li>
+    </ol>
+
+    <h2>Consejos de seguridad:</h2>
+    <ul>
+        <li>Asegúrate de que los niños estén sentados y supervisados mientras comen, especialmente los más pequeños.</li>
+        <li>Siempre ten en cuenta las alergias alimentarias de los niños antes de preparar cualquier alimento.</li>
+        <li>Corta los alimentos en tamaños apropiados para la edad y evita ingredientes que puedan representar un peligro de asfixia.</li>
+    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">Preparación:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1>Guiso de Arroz con Carne</h1>
+
+<h2>Ingredientes:</h2>
+<ul>
+    <li>1 taza de arroz blanco</li>
+    <li>1/4 taza de carne molida (asegúrate de que la carne esté bien cocida y desmenuzada para evitar riesgos de asfixia)</li>
+    <li>1/4 taza de zanahorias en cubos pequeños</li>
+    <li>1/4 taza de guisantes verdes</li>
+    <li>1/4 taza de caldo de pollo (bajo en sodio)</li>
+    <li>1 cucharadita de aceite vegetal</li>
+    <li>1/4 cucharadita de sal (opcional, evita agregar sal para niños menores de 1 año)</li>
+</ul>
+
+<h2>Instrucciones:</h2>
+
+<h3>Para niños de jardín (3-5 años):</h3>
+<ol>
+    <li>Calienta el aceite en una sartén a fuego medio.</li>
+    <li>Agrega la carne molida y cocina hasta que esté bien dorada y cocida.</li>
+    <li>Añade las zanahorias y los guisantes verdes, y cocina durante unos minutos hasta que estén tiernos.</li>
+    <li>Agrega el arroz y revuelve para mezclar todos los ingredientes.</li>
+    <li>Vierte el caldo de pollo sobre la mezcla y revuelve bien.</li>
+    <li>Reduce el fuego a bajo, cubre la sartén y cocina durante aproximadamente 15-20 minutos, o hasta que el arroz esté cocido y haya absorbido todo el caldo.</li>
+    <li>Deja enfriar antes de servir. Asegúrate de que la temperatura sea segura para los niños.</li>
+</ol>
+
+<h3>Para prejardín (0-3 años):</h3>
+<ol>
+    <li>Cocina el arroz siguiendo las instrucciones del paquete y asegúrate de que esté bien cocido y seco.</li>
+    <li>En una sartén aparte, cocina la carne molida hasta que esté bien cocida y desmenuzada.</li>
+    <li>Corta las zanahorias en cubos muy pequeños para evitar riesgos de asfixia.</li>
+    <li>En un plato seguro para niños pequeños, coloca pequeñas porciones de arroz, carne molida, zanahorias y guisantes verdes.</li>
+    <li>Asegúrate de que los trozos de carne y las zanahorias estén en tamaños apropiados para la edad del niño.</li>
+    <li>Los niños pequeños pueden usar sus manos o utensilios seguros para comer y explorar los ingredientes.</li>
+</ol>
+
+<h2>Consejos de seguridad:</h2>
+<ul>
+    <li>Siempre supervisa a los niños mientras comen, especialmente los más pequeños.</li>
+    <li>Asegúrate de que los alimentos estén a una temperatura segura para evitar quemaduras.</li>
+    <li>Evita agregar sal adicional para niños menores de 1 año, ya que su consumo de sodio debe ser limitado.</li>
+    <li>Corta los alimentos en tamaños apropiados para la edad del niño para prevenir riesgos de asfixia.</li>
+</ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+          <nav>
+                  <ul class="pagination">
+                    <li class="page-item disabled"><a href="#" class="page-link" tabindex="-1">Anterior</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
+                  </ul>
+                </nav>
+              </div>
+        
+      <!-- Agrega más filas según tus datos -->
+              </tbody>
+            </table>
+          </div>
+  </main>
+
+  <footer class="footer-09">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+          <h2 class="footer-heading d-flex">
+            <span class="icon d-flex align-items-center justify-content-center"><i class="fa fa-group"></i></span>
+            <link rel="stylesheet" href="CSS/che.css">
+            Quienes somos
+          </h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon ion-ios-pin"><i class="fa fa-street-view"></i></span><a href="#"><span class="text">68i41 Cl. 34 Sur</span></li>
+              <li><span class="icon ion-ios-call"><i class="fa fa-phone"></i><a href="#"></span><span class="text">(+57) 456-7890</span></a></li>
+              <li><span class="icon ion-ios-send"><i class="fa fa-envelope"></i><a href="#"></span><span
+                  class="text">virgilioelmotivado@gmail.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+          <h2 class="footer-heading d-flex align-items-center"><span
+              class="icon d-flex align-items-center justify-content-center"><i
+                class="fa fa-newspaper-o"></i></span>Noticias</h2>
+          <div class="block-21 mb-4 d-flex">
+            <a class="img mr-4 rounded" style="background-image: url(Images/g1.jpg);"></a>
+            <div class="text">
+              <h3 class="heading">Mañana actividad con con juguetes y titeres</a>
+              </h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> Oct. 16, 2023</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="img mr-4 rounded" style="background-image: url(Images/g2.jpg);"></a>
+            <div class="text">
+              <h3 class="heading">La siguiente semana traer temperas </a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> Oct. 25, 2023</a></div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+          <h2> <a href="404.html" class="footer-heading d-flex align-items-center"><span
+                class="icon d-flex align-items-center justify-content-center"><i
+                  class="fa fa-instagram"></i></span>Instagram</h2>
+
+          <div class="block-24">
+            <h2> <a href="500.html" class="footer-heading d-flex align-items-center"><span
+                  class="icon d-flex align-items-center justify-content-center"><i
+                    class="fa fa-twitter"></i></span>Twitter</h2>
+
+            <div class="block-24">
+              <h2> <a href="#" class="footer-heading d-flex align-items-center"><span
+                    class="icon d-flex align-items-center justify-content-center"><i
+                      class="fa fa-facebook"></i></span>Facebook</h2>
+              <div class="block-24">
+                <h2> <a href="#" class="footer-heading d-flex align-items-center"><span
+                      class="icon d-flex align-items-center justify-content-center"><i
+                        class="fa fa-whatsapp"></i></span>Whatsapp</h2>
+
+                <div class="block-24">
+                  <div class="row no-gutters">
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t1.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t2.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t3.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t4.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t5.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t6.jpg);"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top">
+              <div class="col-md-6 col-lg-8">
+                <p class="copyright">
+                  
+                  2023 Copyright &copy;
+                  </i> by <a href="index.html" target="_blank">Zipp Semillas</a>
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="JS/admin.js"></script>
+
+</body>
+
+</html>

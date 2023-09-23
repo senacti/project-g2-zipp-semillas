@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in-Zipp Semillas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="CSS/StyleSesion.css">
+  <script src="JS/Script.js"></script>
+</head>
+
+<body id="body-image">
+
+  <header>
+    <div id="header-image" class="container">
+      <a href="Index.html" class="logo">
+        <a href="index.html" class="logo">
+          <img src="Images/Logo3.png" alt="Logo Zipp Semillas">
+        </a>
+        <h1>Fundación Mil Semillas</h1>
+        <p>Brindando esperanza, educación y felicidad a niños de todo el mundo.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="login-form">
+      <h2>Iniciar Sesión</h2>
+      <form action="Dashboard.html" method="post" id="login-form">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <div class="btn-container">
+          <div class="login-btn">
+            <button type="submit" class="btn btn-login">Iniciar Sesión</button>
+          </div>
+
+        </div>
+        <button type="button" class="btn-btn-cancel" onclick="showRegisterForm()">Registrarse</button>
+        <div class="forgot-password">
+          <a href="#">Recuperar Contraseña</a>
+      </form>
+    </section>
+    <form action="Dashboard.html" method="post" id="registration-form" onsubmit="return validarFormulario()">
+      <section id="register-form" style="display: none;">
+        <h2>Registrarse</h2>
+        <form action="#" method="post" id="registration-form">
+          <form action="#" method="post" id="registration-form">
+            <label for="first_name">Nombre:</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <div id="mensaje_error" class="error-message"></div>
+
+            <label for="last_name">Apellidos:</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <div id="mensaje_error" class="error-message"></div>
+
+            <label for="document_type">Tipo de Documento:</label>
+            <select id="document_type" name="document_type" required>
+              <option value="">Seleccione</option>
+              <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+              <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+              <option value="Cedula extranjera">Cedula extranjera</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+            <div id="error_document_type" class="error-message"></div>
+
+            <label for="document_number">Número de Documento:</label>
+            <input type="text" id="document_number" name="document_number"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
+            <div id="error_document_number" class="error-message"></div>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" min="1" required>
+            <div id="error_age" class="error-message"></div>
+
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone" oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+              required>
+
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="gender">Género:</label>
+            <select id="gender" name="gender" required>
+              <option value="">Seleccione</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Ingresa un correo electrónico válido" />
+
+
+            <label for="city">Ciudad de residencia:</label>
+            <select id="city" name="city" required>
+              <option value="">Seleccione</option>
+              <option value="Arauca">Arauca</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Barranquilla">Barranquilla</option>
+              <option value="Bogotá">Bogotá</option>
+              <option value="Bucaramanga">Bucaramanga</option>
+              <option value="Buenaventura">Buenaventura</option>
+              <option value="Cali">Cali</option>
+              <option value="Cartagena">Cartagena</option>
+              <option value="Cúcuta">Cúcuta</option>
+              <option value="Florencia">Florencia</option>
+              <option value="Ibagué">Ibagué</option>
+              <option value="Inírida">Inírida</option>
+              <option value="Leticia">Leticia</option>
+              <option value="Manizales">Manizales</option>
+              <option value="Medellín">Medellín</option>
+              <option value="Mitú">Mitú</option>
+              <option value="Mocoa">Mocoa</option>
+              <option value="Montería">Montería</option>
+              <option value="Neiva">Neiva</option>
+              <option value="Pasto">Pasto</option>
+              <option value="Pereira">Pereira</option>
+              <option value="Popayán">Popayán</option>
+              <option value="Puerto Carreño">Puerto Carreño</option>
+              <option value="Quibdó">Quibdó</option>
+              <option value="Riohacha">Riohacha</option>
+              <option value="San Andrés">San Andrés</option>
+              <option value="San José del Guaviare">San José del Guaviare</option>
+              <option value="Santa Marta">Santa Marta</option>
+              <option value="Sincelejo">Sincelejo</option>
+              <option value="Tunja">Tunja</option>
+              <option value="Valledupar">Valledupar</option>
+              <option value="Villavicencio">Villavicencio</option>
+              <option value="Yopal">Yopal</option>
+            </select>
+
+            <label for="country">País de origen:</label>
+            <select id="country" name="country" required>
+
+              <option value="">Seleccione</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Chile">Chile</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="España">España</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Honduras">Honduras</option>
+              <option value="México">México</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Panamá">Panamá</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Perú">Perú</option>
+              <option value="República Dominicana">República Dominicana</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Venezuela">Venezuela</option>
+            </select>
+
+            <label for="eps">EPS:</label>
+            <select id="eps" name="eps" required>
+              <option value="">Seleccione</option>
+              <option value="Aliansalud EPS">Aliansalud EPS</option>
+              <option value="Cajacopi EPS">Cajacopi EPS</option>
+              <option value="Capital Salud EPS">Capital Salud EPS</option>
+              <option value="Coomeva EPS">Coomeva EPS</option>
+              <option value="Compensar EPS">Compensar EPS</option>
+              <option value="Comparta EPS">Comparta EPS</option>
+              <option value="Comfenalco Antioquia EPS">Comfenalco Antioquia EPS</option>
+              <option value="Comfenalco Valle EPS">Comfenalco Valle EPS</option>
+              <option value="Coosalud">Coosalud</option>
+              <option value="Cruz Blanca EPS">Cruz Blanca EPS</option>
+              <option value="Ecoopsos EPS">Ecoopsos EPS</option>
+              <option value="EPS Sura">EPS Sura</option>
+              <option value="Famisanar EPS">Famisanar EPS</option>
+              <option value="Mutual Ser">Mutual Ser</option>
+              <option value="Nueva EPS">Nueva EPS</option>
+              <option value="Saludcoop EPS">Saludcoop EPS</option>
+              <option value="Saludcoop ISS">Saludcoop ISS</option>
+              <option value="Salud Total EPS">Salud Total EPS</option>
+              <option value="Saludvida EPS">Saludvida EPS</option>
+              <option value="Sanitas EPS">Sanitas EPS</option>
+              <option value="Savia Salud EPS">Savia Salud EPS</option>
+              <option value="SOS EPS">SOS EPS</option>
+            </select>
+
+            <label for="nombre">Certificado EPS:</label>
+            <label for="file" class="custom-file-label">Subir Certificado:</label>
+<input type="file" id="file" name="file" class="custom-file-input" onchange="updateFileName(this)">
+<span id="file-name" class="file-name">Selecciona un archivo</span>
+<span id="file-upload-error" class="file-error" style="color: red;"></span>
+
+
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="btn-container">
+              <button type="submit" class="btn btn-login">Registrarse</button>
+              <button type="button" class="btn btn-cancel" onclick="showLoginForm()">Cancelar Registro</button>
+            </div>
+          </form>
+          </div>
+        </form>
+    </form>
+    </section>
+  </main>
+
+<footer class="footer-09">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+          <h2 class="footer-heading d-flex">
+            <span class="icon d-flex align-items-center justify-content-center"><i class="fa fa-group"></i></span>
+            <link rel="stylesheet" href="CSS/che.css">
+            Quienes somos
+          </h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon ion-ios-pin"><i class="fa fa-street-view"></i></span><a href="#"><span class="text">68i41 Cl. 34 Sur</span></li>
+              <li><span class="icon ion-ios-call"><i class="fa fa-phone"></i><a href="#"></span><span class="text">(+57) 456-7890</span></a></li>
+              <li><span class="icon ion-ios-send"><i class="fa fa-envelope"></i><a href="#"></span><span
+                  class="text">virgilioelmotivado@gmail.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+          <h2 class="footer-heading d-flex align-items-center"><span
+              class="icon d-flex align-items-center justify-content-center"><i
+                class="fa fa-newspaper-o"></i></span>Noticias</h2>
+          <div class="block-21 mb-4 d-flex">
+            <a class="img mr-4 rounded" style="background-image: url(Images/g1.jpg);"></a>
+            <div class="text">
+              <h3 class="heading">Mañana actividad con con juguetes y titeres</a>
+              </h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> Oct. 16, 2023</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="img mr-4 rounded" style="background-image: url(Images/g2.jpg);"></a>
+            <div class="text">
+              <h3 class="heading">La siguiente semana traer temperas </a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> Oct. 25, 2023</a></div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+          <h2> <a href="404.html" class="footer-heading d-flex align-items-center"><span
+                class="icon d-flex align-items-center justify-content-center"><i
+                  class="fa fa-instagram"></i></span>Instagram</h2>
+
+          <div class="block-24">
+            <h2> <a href="500.html" class="footer-heading d-flex align-items-center"><span
+                  class="icon d-flex align-items-center justify-content-center"><i
+                    class="fa fa-twitter"></i></span>Twitter</h2>
+
+            <div class="block-24">
+              <h2> <a href="#" class="footer-heading d-flex align-items-center"><span
+                    class="icon d-flex align-items-center justify-content-center"><i
+                      class="fa fa-facebook"></i></span>Facebook</h2>
+              <div class="block-24">
+                <h2> <a href="#" class="footer-heading d-flex align-items-center"><span
+                      class="icon d-flex align-items-center justify-content-center"><i
+                        class="fa fa-whatsapp"></i></span>Whatsapp</h2>
+
+                <div class="block-24">
+                  <div class="row no-gutters">
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t1.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t2.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t3.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t4.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t5.jpg);"></a>
+                    </div>
+                    <div class="col-4 col-md-4 p-1">
+                      <a href="#" class="img rounded" style="background-image: url(Images/t6.jpg);"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top">
+              <div class="col-md-6 col-lg-8">
+                <p class="copyright">
+                 
+                  2023 Copyright &copy;
+                  </i> by <a href="index.html" target="_blank">Zipp Semillas</a>
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
